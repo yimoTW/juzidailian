@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<script>
+/* =========================
+   只需要修改這一區
+   所有文字與 LINE 連結都集中在這裡
+   ========================= */
+/* 修改方式：只改下面 SITE_TEXT 裡的內容即可，其他 HTML/CSS/JS 不需要動。 */
+const SITE_TEXT = {
+  "LINE_URL": "https://lin.ee/UhFbnFI",
+  "BRAND_NAME": "橘子平台",
+  "NAV_BADGE": "遊戲接單人員招募中",
+  "HERO_KICKER": "零經驗也可以加入",
+  "HERO_TITLE_1": "有時間玩遊戲，",
+  "HERO_TITLE_2": "就可以開始接單。",
+  "HERO_DESC": "不需要代打經驗，也不需要高端技術。只要你平常有時間玩遊戲、願意照訂單要求完成任務，就能加入橘子平台接單。",
+  "HERO_NOTE": "零押金・零預付・零經驗也可｜有時間玩遊戲就能接",
+  "PILL_1": "0 押金",
+  "PILL_2": "0 預付金",
+  "PILL_3": "0 經驗也可",
+  "PILL_4": "有時間就能接",
+  "JOIN_COST_TITLE": "加入成本",
+  "JOIN_COST": "NT$ 0",
+  "JOIN_COST_DESC": "平台不會要求任何押金、保證金、預付金或加入費。",
+  "SAFE_1_TITLE": "先看內容再決定",
+  "SAFE_1_DESC": "訂單內容、時間與報酬都清楚顯示，適合自己再接。",
+  "SAFE_2_TITLE": "不強制接單",
+  "SAFE_2_DESC": "有空再接，依照自己的時間安排。",
+  "REQ_TITLE": "你只需要做到這些",
+  "REQ_SUB": "不用技術型代打，也能從簡單任務開始。",
+  "REQ_1_TITLE": "有時間玩遊戲",
+  "REQ_1_DESC": "能配合訂單指定時間完成即可，不要求高段位。",
+  "REQ_2_TITLE": "照任務要求完成",
+  "REQ_2_DESC": "日常、活動、素材、練等或其他遊戲內任務。",
+  "REQ_3_TITLE": "完成後取得報酬",
+  "REQ_3_DESC": "每筆訂單報酬清楚顯示，接單前就能先確認。",
+  "TASK_TITLE": "可接內容",
+  "TASK_SUB": "全遊戲類目持續增加中。",
+  "TASK_1_TITLE": "日常 / 活動任務",
+  "TASK_1_DESC": "登入、簽到、跑活動、完成每日或每週任務。",
+  "TASK_2_TITLE": "刷素材 / 資源",
+  "TASK_2_DESC": "依指定數量收集素材、資源或活動道具。",
+  "TASK_3_TITLE": "練等 / 帳號養成",
+  "TASK_3_DESC": "依照要求提升等級、角色進度或養成內容。",
+  "TASK_4_TITLE": "其他簡單遊戲任務",
+  "TASK_4_DESC": "不需要高端技術，只要照需求完成即可。",
+  "GAMES_TITLE": "目前可接單遊戲",
+  "GAMES_SUB": "以下為目前常見接單類目，其他遊戲也可向客服詢問。",
+  "GAMES": [
+    "英雄聯盟 LOL",
+    "VALORANT 特戰英豪",
+    "APEX 英雄",
+    "傳說對決",
+    "原神",
+    "崩壞：星穹鐵道",
+    "楓之谷",
+    "CS2",
+    "Steam 熱門遊戲",
+    "其他手遊 / PC 遊戲"
+  ],
+  "GAMES_NOTE": "沒有列出的遊戲也可以詢問，平台會依實際訂單需求持續新增。",
+  "ANTI_SCAM_TITLE": "官方防詐聲明",
+  "ANTI_SCAM_DESC": "橘子平台不會以任何名義要求接單人員支付押金、保證金、認證費、解鎖費或任何形式的預付款。",
+  "CTA_TITLE": "零經驗也能開始。",
+  "CTA_DESC": "只要你有時間、有責任感、願意照要求完成遊戲任務即可。",
+  "CTA_BUTTON": "💬 聯絡客服接單",
+  "MODAL_TITLE": "申請打手資格",
+  "MODAL_DESC": "聯絡客服申請打手後台帳號，獲取代練資格。",
+  "STEP_1_TITLE": "聯絡官方客服",
+  "STEP_1_DESC": "點擊下方 LINE 客服按鈕",
+  "STEP_2_TITLE": "申請打手後台帳號",
+  "STEP_2_DESC": "依客服指示完成基本資料確認",
+  "STEP_3_TITLE": "獲取代練資格",
+  "STEP_3_DESC": "開通後即可登入後台查看可接訂單",
+  "LINE_BUTTON": "LINE 聯絡客服",
+  "LINE_TIP": "官方客服不會要求支付任何押金、預付金、保證金或認證費。",
+  "CLOSE_BUTTON": "關閉",
+  "FOOTER": "橘子平台｜遊戲任務接單招募頁"
+};
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>橘子平台｜遊戲接單人員招募</title>
+<style>
+:root{--bg:#070b0f;--panel:#101820;--line:#26323d;--text:#f7f9fb;--muted:#9eabb6;--orange:#ff7a18;--orange2:#ff9f43;--green:#35dc84;--shadow:0 24px 70px rgba(0,0,0,.36)}
+*{box-sizing:border-box}html,body{margin:0;background:radial-gradient(circle at 80% 5%,rgba(255,122,24,.18),transparent 28%),radial-gradient(circle at 10% 90%,rgba(255,122,24,.08),transparent 35%),linear-gradient(180deg,#081018,#05090d);color:var(--text);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",Arial,sans-serif}body{min-height:100vh}.wrap{max-width:1180px;margin:auto;padding:28px 22px 60px}.nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}.brand{display:flex;align-items:center;gap:12px}.logo{font-size:38px;filter:drop-shadow(0 8px 18px rgba(255,122,24,.25))}.brand strong{font-size:24px}.brand small{display:block;color:var(--orange2);margin-top:2px;letter-spacing:.12em}.badge{border:1px solid rgba(255,122,24,.45);background:rgba(255,122,24,.08);padding:10px 14px;border-radius:999px;color:#ffd1ad;font-weight:800;font-size:13px}.hero{display:grid;grid-template-columns:1.25fr .75fr;gap:18px;align-items:stretch}.hero-main,.hero-side,.section-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(17,26,34,.95),rgba(10,16,22,.96));box-shadow:var(--shadow)}.hero-main{border-radius:22px;padding:46px;position:relative;overflow:hidden}.hero-main:after{content:"";position:absolute;width:330px;height:330px;border-radius:50%;right:-120px;top:-110px;background:radial-gradient(circle,rgba(255,129,31,.24),transparent 68%)}.kicker{color:var(--orange2);font-weight:900;letter-spacing:.13em;font-size:13px}h1{font-size:56px;line-height:1.03;margin:14px 0 18px;letter-spacing:-.035em}h1 .accent-title{color:var(--orange2)}.lead{font-size:20px;line-height:1.8;color:#dce4ea;max-width:760px;margin:0}.hero-pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}.pill{padding:11px 14px;border-radius:10px;background:#0b141b;border:1px solid #2a3944;font-weight:900}.pill.hot{border-color:#a95114;background:linear-gradient(180deg,#2b1709,#18100b);color:#ffb06c}.hero-side{border-radius:22px;padding:28px;display:flex;flex-direction:column;justify-content:center;gap:14px}.side-title{font-size:18px;font-weight:900;margin-bottom:4px}.big-zero{font-size:54px;font-weight:1000;color:var(--orange2);line-height:1}.zero-sub{color:#d5dde3;font-size:16px;line-height:1.6}.rule{height:1px;background:#25313b;margin:4px 0}.safe{display:flex;gap:12px;align-items:flex-start;padding:12px 0}.safe .ic{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:rgba(53,220,132,.1);border:1px solid rgba(53,220,132,.35);color:var(--green);font-weight:1000}.safe b{display:block;margin-bottom:3px}.safe span{color:var(--muted);font-size:14px;line-height:1.5}.section{margin-top:18px}.section-card{border-radius:18px;padding:28px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}.section-head h2{margin:0;font-size:28px}.section-head p{margin:0;color:var(--muted)}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{padding:20px;border:1px solid #26333d;border-radius:14px;background:linear-gradient(180deg,#0e171e,#0a1117)}.feature .icon{font-size:26px;margin-bottom:12px}.feature h3{margin:0 0 8px;font-size:18px}.feature p{margin:0;color:var(--muted);line-height:1.65}.jobs{display:grid;grid-template-columns:1fr 1fr;gap:14px}.job{padding:18px;border:1px solid #2b3944;border-radius:14px;background:#0b141a}.job b{font-size:17px}.job span{display:block;color:var(--muted);margin-top:6px;line-height:1.55}.statement{margin-top:18px;border-radius:18px;padding:26px 28px;border:1px solid #8a4516;background:linear-gradient(90deg,#2a1509,#15100d 55%,#0d1419);display:flex;align-items:center;gap:18px}.statement .shield{font-size:34px}.statement strong{font-size:20px;display:block;margin-bottom:5px}.statement p{margin:0;color:#e7c8b2;line-height:1.7}.cta{margin-top:18px;border-radius:20px;padding:34px;background:linear-gradient(135deg,#ff8427,#ff6410);color:white;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 20px 55px rgba(255,100,16,.22)}.cta h2{margin:0 0 6px;font-size:30px}.cta p{margin:0;opacity:.92}.cta .btn{background:#10161b;color:white;border:1px solid rgba(255,255,255,.25);padding:15px 20px;border-radius:12px;font-weight:1000;white-space:nowrap}.footer{text-align:center;color:#71808b;font-size:12px;margin-top:24px}.edit-note{position:fixed;right:16px;bottom:16px;background:#111920;border:1px solid #35414a;color:#b9c4cc;padding:10px 12px;border-radius:10px;font-size:12px}[contenteditable="true"]{outline:none;border-radius:4px}[contenteditable="true"]:hover{box-shadow:0 0 0 1px rgba(255,122,24,.45)}[contenteditable="true"]:focus{box-shadow:0 0 0 2px rgba(255,122,24,.7);background:rgba(255,122,24,.06)}@media(max-width:860px){.hero{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}.jobs{grid-template-columns:1fr}h1{font-size:42px}.hero-main{padding:30px}.cta{align-items:flex-start;flex-direction:column}}
+
+.contact-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  background:#10161b;color:#fff;text-decoration:none;border:1px solid rgba(255,255,255,.28);
+  padding:16px 22px;border-radius:12px;font-weight:1000;white-space:nowrap;cursor:pointer;
+  box-shadow:0 10px 28px rgba(0,0,0,.22);transition:.18s ease;
+}
+.contact-btn:hover{transform:translateY(-2px);background:#182129}
+.floating-contact{
+  position:fixed;right:22px;bottom:22px;z-index:80;
+  background:linear-gradient(180deg,#ff932f,#ff6812);color:white;border:0;
+  padding:15px 20px;border-radius:999px;font-weight:1000;font-size:15px;
+  box-shadow:0 14px 35px rgba(255,104,18,.32);cursor:pointer;
+}
+.modal{
+  position:fixed;inset:0;display:none;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.68);z-index:100;padding:20px
+}
+.modal.show{display:flex}
+.modal-card{
+  width:min(440px,100%);background:linear-gradient(180deg,#111b23,#0a1117);
+  border:1px solid #754218;border-radius:18px;padding:26px;box-shadow:0 28px 90px rgba(0,0,0,.55)
+}
+.modal-card h3{margin:0 0 10px;font-size:24px}
+.modal-card p{margin:0 0 18px;color:#b9c4cc;line-height:1.7}
+.modal-actions{display:flex;gap:10px}
+.modal-actions button{flex:1;padding:13px;border-radius:10px;font-weight:900;cursor:pointer}
+.modal-actions .primary{border:0;background:linear-gradient(180deg,#ff932f,#ff6812);color:white}
+.modal-actions .secondary{background:#111a21;border:1px solid #34414a;color:#dbe3e9}
+
+
+.hero-contact-wrap{margin-top:30px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.hero-contact-btn{
+  border:0;cursor:pointer;
+  background:linear-gradient(180deg,#ffb04b,#ff7818);
+  color:#111;font-size:22px;font-weight:1000;
+  padding:18px 30px;border-radius:14px;
+  box-shadow:0 16px 42px rgba(255,120,24,.34),0 0 0 1px rgba(255,190,120,.32) inset;
+  transition:.18s ease;
+}
+.hero-contact-btn:hover{transform:translateY(-2px) scale(1.01);filter:brightness(1.05)}
+.hero-contact-note{color:#ffd4b2;font-weight:900;font-size:14px;line-height:1.6}
+.game-list{
+  display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:14px 0 18px
+}
+.game-list span{
+  padding:10px 12px;border-radius:9px;
+  background:#0b141a;border:1px solid #2a3842;color:#e6edf2;font-size:14px;font-weight:800
+}
+.game-hint{font-size:13px;color:#91a0aa;margin-top:8px}
+@media(max-width:640px){
+  .hero-contact-btn{width:100%;font-size:20px}
+  .game-list{grid-template-columns:1fr}
+}
+
+
+.games-showcase{
+  border-color:#4a2d19;
+  background:
+    radial-gradient(circle at 85% 0%,rgba(255,122,24,.09),transparent 32%),
+    linear-gradient(180deg,#101820,#091116);
+}
+.game-grid-home{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:12px;
+}
+.game-home-item{
+  min-height:58px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:12px 10px;
+  border-radius:12px;
+  background:#0b141a;
+  border:1px solid #31414d;
+  color:#f4f7f9;
+  font-weight:900;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.01);
+}
+.game-home-item:hover{
+  border-color:#a9551a;
+  background:#14140f;
+}
+.game-home-note{
+  margin-top:14px;
+  color:#91a0aa;
+  font-size:13px;
+  line-height:1.7;
+}
+.qualification-modal{text-align:center}
+.qualification-icon{font-size:54px;margin-bottom:4px}
+.qualification-modal h3{font-size:28px;margin:4px 0 10px}
+.qualification-main{
+  color:#f4f7f9!important;
+  font-size:18px;
+  font-weight:900;
+  line-height:1.7!important;
+  margin-bottom:18px!important;
+}
+.qualification-steps{
+  display:grid;
+  gap:10px;
+  text-align:left;
+  margin-bottom:18px;
+}
+.qualification-steps>div{
+  display:grid;
+  grid-template-columns:34px 1fr;
+  grid-template-rows:auto auto;
+  column-gap:10px;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #2b3944;
+  background:#0b141a;
+}
+.qualification-steps span{
+  grid-row:1/3;
+  width:30px;height:30px;
+  display:grid;place-items:center;
+  border-radius:50%;
+  background:linear-gradient(180deg,#ff9a35,#ff6b12);
+  color:white;font-weight:1000;
+}
+.qualification-steps b{font-size:15px}
+.qualification-steps small{color:#91a0aa;margin-top:3px;line-height:1.5}
+.line-contact-btn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  min-height:54px;
+  background:#06c755;
+  color:white;
+  text-decoration:none;
+  border-radius:12px;
+  font-size:18px;
+  font-weight:1000;
+  box-shadow:0 12px 28px rgba(6,199,85,.22);
+}
+.line-contact-btn:hover{filter:brightness(1.06);transform:translateY(-1px)}
+.line-tip{
+  margin-top:12px;
+  padding:10px 12px;
+  border-radius:9px;
+  background:rgba(53,220,132,.07);
+  border:1px solid rgba(53,220,132,.22);
+  color:#a9e9c3;
+  font-size:12px;
+  line-height:1.6;
+}
+.modal-close-only{
+  width:100%;
+  margin-top:10px;
+  padding:12px;
+  border-radius:10px;
+  background:#111a21;
+  color:#dbe3e9;
+  border:1px solid #34414a;
+  font-weight:900;
+  cursor:pointer;
+}
+@media(max-width:1000px){
+  .game-grid-home{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:580px){
+  .game-grid-home{grid-template-columns:1fr}
+}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="nav">
+    <div class="brand"><div class="logo">🍊</div><div><strong data-site="BRAND_NAME"></strong><small>GAME TASK PLATFORM</small></div></div>
+    <div class="badge" data-site="NAV_BADGE"></div>
+  </div>
+  <section class="hero">
+    <div class="hero-main">
+      <div class="kicker" data-site="HERO_KICKER"></div>
+      <h1><span data-site="HERO_TITLE_1"></span><br><span data-site="HERO_TITLE_2" class="accent-title"></span></h1>
+      <p class="lead">不需要代打經驗，也不需要高端技術。只要你平常有時間玩遊戲、願意照訂單要求完成任務，就能加入橘子平台接單。</p>
+      <div class="hero-contact-wrap">
+        <button class="hero-contact-btn" onclick="openContact()" data-site="CTA_BUTTON"></button>
+        <div class="hero-contact-note" data-site="HERO_NOTE"></div>
+      </div>
+      <div class="hero-pills"><div class="pill hot" data-site="PILL_1"></div><div class="pill hot" data-site="PILL_2"></div><div class="pill" data-site="PILL_3"></div><div class="pill" data-site="PILL_4"></div></div>
+    </div>
+    <aside class="hero-side">
+      <div class="side-title" data-site="JOIN_COST_TITLE"></div><div class="big-zero" data-site="JOIN_COST"></div><div class="zero-sub" data-site="JOIN_COST_DESC"></div><div class="rule"></div>
+      <div class="safe"><div class="ic">✓</div><div><b data-site="SAFE_1_TITLE"></b><span data-site="SAFE_1_DESC"></span></div></div>
+      <div class="safe"><div class="ic">✓</div><div><b data-site="SAFE_2_TITLE"></b><span data-site="SAFE_2_DESC"></span></div></div>
+    </aside>
+  </section>
+  <section class="section"><div class="section-card"><div class="section-head"><div><h2 data-site="REQ_TITLE"></h2><p data-site="REQ_SUB"></p></div></div><div class="grid3"><div class="feature"><div class="icon">🎮</div><h3 data-site="REQ_1_TITLE"></h3><p data-site="REQ_1_DESC"></p></div><div class="feature"><div class="icon">📋</div><h3 data-site="REQ_2_TITLE"></h3><p data-site="REQ_2_DESC"></p></div><div class="feature"><div class="icon">💰</div><h3 data-site="REQ_3_TITLE"></h3><p data-site="REQ_3_DESC"></p></div></div></div></section>
+  <section class="section"><div class="section-card"><div class="section-head"><div><h2 data-site="TASK_TITLE"></h2><p data-site="TASK_SUB"></p></div></div><div class="jobs"><div class="job"><b data-site="TASK_1_TITLE"></b><span data-site="TASK_1_DESC"></span></div><div class="job"><b data-site="TASK_2_TITLE"></b><span data-site="TASK_2_DESC"></span></div><div class="job"><b data-site="TASK_3_TITLE"></b><span data-site="TASK_3_DESC"></span></div><div class="job"><b data-site="TASK_4_TITLE"></b><span data-site="TASK_4_DESC"></span></div></div></div></section>
+  
+<section class="section">
+  <div class="section-card games-showcase">
+    <div class="section-head">
+      <div>
+        <h2 data-site="GAMES_TITLE"></h2>
+        <p data-site="GAMES_SUB"></p>
+      </div>
+    </div>
+    <div class="game-grid-home" id="gameGridHome"></div>
+    <div class="game-home-note" data-site="GAMES_NOTE"></div>
+  </div>
+</section>
+
+<div class="statement"><div class="shield">🛡️</div><div><strong data-site="ANTI_SCAM_TITLE"></strong><p data-site="ANTI_SCAM_DESC"></p></div></div>
+  <section class="cta"><div><h2 data-site="CTA_TITLE"></h2><p data-site="CTA_DESC"></p></div><button class="contact-btn" onclick="openContact()" data-site="CTA_BUTTON"></button></section>
+  <div class="footer" data-site="FOOTER"></div>
+</div>
+
+<button class="floating-contact" onclick="openContact()" data-site="CTA_BUTTON"></button>
+
+<div id="contactModal" class="modal" onclick="if(event.target===this) closeContact()">
+  <div class="modal-card qualification-modal">
+    <div class="qualification-icon">🍊</div>
+    <h3 data-site="MODAL_TITLE"></h3>
+    <p class="qualification-main" data-site="MODAL_DESC"></p>
+    <div class="qualification-steps">
+      <div><span>1</span><b data-site="STEP_1_TITLE"></b><small data-site="STEP_1_DESC"></small></div>
+      <div><span>2</span><b data-site="STEP_2_TITLE"></b><small data-site="STEP_2_DESC"></small></div>
+      <div><span>3</span><b data-site="STEP_3_TITLE"></b><small data-site="STEP_3_DESC"></small></div>
+    </div>
+
+    <a id="lineContactBtn" class="line-contact-btn"
+       href="#" id="lineContactBtn"
+       target="_blank" rel="noopener">
+      <span data-site="LINE_BUTTON"></span>
+    </a>
+
+    <div class="line-tip" data-site="LINE_TIP"></div>
+
+    <button class="modal-close-only" onclick="closeContact()" data-site="CLOSE_BUTTON"></button>
+  </div>
+</div>
+
+<script>
+
+function applySiteText(){
+  document.querySelectorAll("[data-site]").forEach(el=>{
+    const key = el.dataset.site;
+    if (SITE_TEXT[key] !== undefined) el.textContent = SITE_TEXT[key];
+  });
+
+  const grid = document.getElementById("gameGridHome");
+  if (grid) {
+    grid.innerHTML = SITE_TEXT.GAMES
+      .map(game => `<div class="game-home-item">${game}</div>`)
+      .join("");
+  }
+
+  const lineBtn = document.getElementById("lineContactBtn");
+  if (lineBtn) lineBtn.href = SITE_TEXT.LINE_URL;
+}
+document.addEventListener("DOMContentLoaded", applySiteText);
+
+function openContact(){
+  document.getElementById('contactModal').classList.add('show');
+}
+function closeContact(){
+  document.getElementById('contactModal').classList.remove('show');
+}
+
+</script>
+
+</body>
+</html>
